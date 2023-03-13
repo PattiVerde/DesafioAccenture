@@ -94,7 +94,5 @@ public class BasePage {
 	public void fecharBrowser() {
 		getDriver().quit();
 	}
-	
-	
-	
+
 }

@@ -52,16 +52,17 @@ Funcionalidade: Cadastro de veiculos com sucesso
    
    E clique em Select Price Option
    E escolha Select Option
-  # E clique NextPO
+   E clique NextPO
    
-  # Cenário: Funcionalidade Cotacao
+   Cenário: Funcionalidade Cotacao
    
-  # E clique em Send Quote
-  # E digite EMail
-  #E digite Phone
-   #E digite Username
-   #E digite Password
-   #E digite Confirm Password
-   #E digite Comments
-   #E clique Send
+   E clique em Send Quote
+   E digite EMail
+   E digite Phone
+   E digite Username
+   E digite Password
+   E digite Confirm Password
+   E digite Comments
+   Quando clicar em Send
+   Então irá aparecer mensagem de sucesso de Sending e-mail success!
    

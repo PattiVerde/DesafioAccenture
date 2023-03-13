@@ -278,10 +278,15 @@ public class VehicleDataSteps extends BasePage{
 	  cadastroVehicle.digiteComments();
 	}
 
-	@Dado("clique Send")
-	public void cliqueSend() {
-	    cadastroVehicle.clicarSend();
+	@Quando("clicar em Send")
+	public void clicarEmSend() {
+		cadastroVehicle.clicarSend();
 	}
 
+	@Então("irá aparecer mensagem de sucesso de Sending e-mail success!")
+	public void iráAparecerMensagemDeSucessoDeSendingEMailSuccess() {
+		cadastroVehicle.validarMensagemSucesso();
+		fecharBrowser();
+	}
 
 }

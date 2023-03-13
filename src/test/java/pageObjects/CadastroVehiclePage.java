@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import core.BasePage;
@@ -187,7 +188,7 @@ public class CadastroVehiclePage extends BasePage {
 	}
 
 	public void escolhaSelectOption() {		
-		clicar (By.xpath("//label//input[@id='selectplatinum']"));
+		clicar(By.xpath("//label//input[@id='selectplatinum']//parent::label"));
 		
 	}
 
@@ -228,19 +229,18 @@ public class CadastroVehiclePage extends BasePage {
 
 	public void digiteComments() {
 		escrever(By.id("Comments"), "fakljlkjflksçfjlks lkjdfsalkjsf");
-		
-		
 	}
 
 	public void clicarSend() {
 		clicar (By.id("sendemail"));
-		
 	}
-	
 
-	
-
-	
+	public void validarMensagemSucesso() {
+		String mensagemSucesso = "//div[@class='sweet-alert showSweetAlert visible']//h2";
+		esperarElementoFicarVisivel(By.xpath(mensagemSucesso));
+		String textoElemento = DriverFactory.getDriver().findElement(By.xpath(mensagemSucesso)).getText();
+		Assert.assertEquals("Sending e-mail success!",textoElemento);
+	}
 }
 
 	
