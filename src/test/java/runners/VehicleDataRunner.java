@@ -8,16 +8,16 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-	    dryRun = true,
+	//dryRun = true,
 		strict = true
 		,monochrome = true
 		,stepNotifications = true
-		,features = "src/test/resources/features/vericle/VericleData.feature"
+		,features = ("src/test/resources/features/vehicle/VehicleData.feature")
 		,glue = "stepDefinitions"
-		,plugin = {"pretty","html:target/report-html/vericle/VericleData", "json:target/cucumber-reports/vericle/VericleData/VericleData.json"}
+		,plugin = {"pretty","html:target/report-html/vehicle/VehicleData", "json:target/cucumber-reports/vehicle/VehicleData/VehicleData.json"}
 		,snippets = SnippetType.CAMELCASE
 )
 
-public class VericleDataRunner {
+public class VehicleDataRunner {
 
 }

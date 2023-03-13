@@ -6,7 +6,7 @@ import core.BasePage;
 import core.DriverFactory;
 
 
-public class VericleDataPage extends BasePage {
+public class VehicleDataPage extends BasePage {
 
 	public void acessarSignIn() {
 		// Criei um método clicar que está em BasePage, ele servirá para todas as funções de .click(); 
@@ -15,12 +15,7 @@ public class VericleDataPage extends BasePage {
 		clicar(By.xpath("//div//a[@class='login']"));
 	}
 
-	public void digitarEmail() {
-		// Criei o método escrever, em BasePage, que será usado para escrever em todos os inputs. 
-		// Ele vai ter uma espera, wait, para aguardar o elemento ficar visível na tela. Também terá uma função de limpar o input e enviar o sendkeys
-		escrever(By.id("email_create"), gerarEmailRandomico());
-		
-	}
+
 
 	public void cliqueCreateAccount() {
 		clicar(By.id("SubmitCreate"));
@@ -47,9 +42,7 @@ public class VericleDataPage extends BasePage {
 		escrever(By.id("customer_lastname"), lastName);
 	}
 
-	public void digitarPassword(String password) {
-		escrever(By.id("passwd"), password);
-	}
+	
 
 	public void selecionarDateBirth() {
 		// Criação do método (selecionarComboBoxIndice) para selecionar combobox por índice
