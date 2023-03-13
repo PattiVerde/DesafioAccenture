@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-	//dryRun = true,
+	    //dryRun = true,
 		strict = true
 		,monochrome = true
 		,stepNotifications = true
